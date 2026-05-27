@@ -1,0 +1,12 @@
+[workspace]
+authors = ["MessereN <nicholas.messere@torontomu.ca>"]
+channels = ["bioconda", "conda-forge", "main", "r", "msys2"]
+name = "4_snakemake_download_data"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+pipeline_run = "pixi run snakemake -s workflow/Snakefile -c 2 --configfile config/config.yaml"
+[dependencies]
+python = "*"
+snakemake = "7.32.4.*"
